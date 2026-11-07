@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKAS PRABHU — Creative Developer &amp; Website Designer · Digital Experiences</title>
+  <meta name="description"
+    content="I design and develop visually engaging digital experiences that bring ideas to life, connect brands with people and move businesses forward." />
+  <meta property="og:title" content="AKAS PRABHU — Creative Developer &amp; Website Designer" />
+  <meta property="og:description"
+    content="Digital Experiences That Make An Impact. Modern websites, interactive web applications, and immersive digital experiences for brands, companies, agencies, and founders." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- 0ms Flash Prevention Script -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('akas_portfolio_theme');
+        var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        var theme = stored === 'light' || (!stored && prefersLight) ? 'light' : 'dark';
+        var root = document.documentElement;
+        root.classList.remove('dark', 'light');
+        root.classList.add(theme);
+        root.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body
+  class="bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased selection:bg-[var(--selection-bg)] selection:text-[var(--selection-text)] overflow-x-hidden">
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
