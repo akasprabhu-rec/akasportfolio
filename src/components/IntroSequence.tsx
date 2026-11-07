@@ -122,14 +122,14 @@ export const IntroSequence: React.FC<IntroSequenceProps> = ({
               initial={{ opacity: 1 }}
               exit={{ opacity: 0, scale: 1.04, filter: 'blur(6px)' }}
               transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-              className="relative z-20 flex flex-col items-center"
+              className="relative z-20 flex flex-col items-center w-full max-w-full px-2"
             >
-              <span className="text-[11px] font-mono-num tracking-[0.28em] text-[#B8C9FF] uppercase mb-4">
+              <span className="text-[10px] sm:text-[11px] font-mono-num tracking-[0.2em] sm:tracking-[0.28em] text-[#B8C9FF] uppercase mb-4 text-center max-w-full">
                 {introData.phase1Text}
               </span>
               <h1
                 aria-label={introData.phase2Name}
-                className="font-display text-5xl sm:text-7xl md:text-8xl font-bold tracking-[-0.03em] text-white flex flex-wrap justify-center overflow-hidden py-2"
+                className="font-display text-[clamp(2rem,8.5vw,2.85rem)] sm:text-7xl md:text-8xl font-bold tracking-[-0.03em] text-white flex flex-nowrap justify-center items-center overflow-hidden py-2 whitespace-nowrap max-w-full"
               >
                 {nameChars.map((char, index) => (
                   <motion.span
@@ -141,7 +141,7 @@ export const IntroSequence: React.FC<IntroSequenceProps> = ({
                       delay: index * 0.035,
                       ease: [0.16, 1, 0.3, 1],
                     }}
-                    className="inline-block"
+                    className="inline-block shrink-0"
                   >
                     {char === ' ' ? '\u00A0' : char}
                   </motion.span>
